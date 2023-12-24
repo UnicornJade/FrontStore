@@ -1,0 +1,30 @@
+/*SideBar*/
+.sideBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 220px;
+    padding: 4px 6px 4px 8px;
+}
+
+.sideBarItems {
+    width: 206px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 24px;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin: 4px 0;
+    background-color: #E3DEDA;
+}
+
+.sideBar .mainSection {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sideBar .bottomSection {
+
+}
