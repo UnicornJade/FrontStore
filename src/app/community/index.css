@@ -1,0 +1,25 @@
+.community {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.community .title {
+    height: 45px;
+    padding: 16px 0 12px 0;
+}
+
+.community .title p {
+    margin-left: 8px;
+    font-size: 15px;
+    line-height: 17px;
+    color: #ffffff;
+    opacity: 0.5;
+    /*letter-spacing: 0.025em;*/
+}
+
+.community .store {
+    flex-grow: 1;
+
+}

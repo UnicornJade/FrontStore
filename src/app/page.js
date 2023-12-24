@@ -1,15 +1,9 @@
 import SideBar from "@/components/SideBar";
+import Script from 'next/script'
 
-export default function Home() {
+export default function Home({children}) {
     return (
-        <div className="home">
-            {/*  SideBar*/}
-            <div className="sideContainer">
-                <SideBar></SideBar>
-            </div>
-
-            {/*  MainStore*/}
-            <div className="mainStore">main</div>
-        </div>
-    );
+        <>
+            <div>root</div>
+        </>);
 }

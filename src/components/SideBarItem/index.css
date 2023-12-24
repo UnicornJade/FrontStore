@@ -1,0 +1,35 @@
+.sideBarItems {
+    width: 206px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 24px;
+    border-radius: 8px;
+    padding: 8px 15px;
+    margin: 4px 0;
+}
+
+.sideBarItems:hover {
+    background-color: #1E1E1E;
+    cursor: pointer;
+}
+
+.sideBarItems .innerItem {
+    display: flex;
+}
+
+.sideBarItems .innerItem .icon {
+    height: 24px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.sideBarItems .innerItem div {
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 12px;
+    line-height: 24px;
+    flex: 1;
+    opacity: 1;
+}

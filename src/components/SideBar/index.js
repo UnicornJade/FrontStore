@@ -1,16 +1,34 @@
 import './index.css'
+import SideBarItem from "@/components/SideBarItem";
 
 export default function SideBar() {
     return (
         <div className="sideBar">
             <div className="mainSection">
-                <div className="sideBarItems userInfor">UserInfo</div>
-                <div className="sideBarItems items-01">My Store</div>
-                <div className="sideBarItems items-02">Public Store</div>
-                <div className="sideBarItems items-03">Others</div>
+                <SideBarItem
+                    className={"userInfo"}
+                    innerText={"UserInfo"}
+                    active
+                ></SideBarItem>
+                <SideBarItem
+                    href={"/personal"}
+                    className={"personalStore"}
+                    iconType={"icon-person_crop_circle"}
+                    innerText={"Personal"}
+                ></SideBarItem>
+                <SideBarItem
+                    href={"/community"}
+                    className={"publicStore"}
+                    iconType={"icon-template-f"}
+                    innerText={"Public Store"}
+                ></SideBarItem>
             </div>
             <div className="bottomSection">
-                <div className="sideBarItems settings">settings</div>
+                <SideBarItem
+                    href={''}
+                    className={"settings"}
+                    innerText={"Settings"}
+                ></SideBarItem>
             </div>
         </div>
     )
