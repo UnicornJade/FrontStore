@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import SideBarItem from "@/components/SideBarItem";
 
 export default function SideBar() {

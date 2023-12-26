@@ -1,0 +1,52 @@
+@use 'src/assets/styles/responsive';
+//卡片size
+$card-size: (304px, 175px);
+$card-width: nth($card-size, 1);
+$card-height: nth($card-size, 2);
+
+// 设备类型到列数的映射
+$device-columns: (
+        "phone": 1,
+        "pad": 2,
+        "notebook": 2,
+        "desktop": 2,
+        "tv":auto-fill
+);
+$justify-center: ('phone', 'pad');
+
+.grid-container {
+  display: grid;
+  gap: 10px; /* 固定间距 */
+  padding: 10px; /* 容器内边距 */
+  @each $d in $justify-center {
+    @include responsive.responsive-grid($d) {
+      justify-content: center;
+    }
+  }
+  //响应式
+  @each $device, $col in $device-columns {
+    @if $device=='pad' {
+      @media (min-width: 481px) and (max-width: 654px) {
+        grid-template-columns: repeat(1, $card-width);
+      }
+      @media (min-width: 655px) and (max-width: 874px) {
+        grid-template-columns: repeat(2, $card-width);
+      }
+    } @else {
+      @include responsive.responsive-grid($device) {
+        grid-template-columns: repeat($col, $card-width);
+      }
+    }
+
+  }
+}
+
+.grid-item {
+  width: $card-width; /* 固定宽度 */
+  height: $card-height; /* 固定高度 */
+  background: lightblue;
+  text-align: center;
+  padding: 20px;
+}
+
+

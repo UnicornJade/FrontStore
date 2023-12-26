@@ -1,0 +1,32 @@
+/*SideBar*/
+@use 'src/assets/styles/responsive';
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 220px;
+  height: 100vh;
+  padding: 4px 6px 4px 8px;
+  @include responsive.responsive-grid('phone') {
+    display: none;
+  }
+  @include responsive.responsive-grid('pad') {
+    display: none;
+  }
+}
+
+
+.sideBar .mainSection {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sideBar .bottomSection .settings {
+  font-size: 15px;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  opacity: 0.68;
+}

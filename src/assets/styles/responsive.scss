@@ -1,0 +1,36 @@
+// 定义断点
+$breakpoints: (
+        'phone':(
+                320px, 480px
+        ),
+        'pad':(
+                481px, 874px
+        ),
+        'notebook':(
+                874px, 1024px
+        ),
+        'desktop':(
+                1025px, 1200px
+        ),
+        'tv':1201px
+);
+// Mixin for responsive grid columns
+@mixin responsive-grid($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $bp: map-get($breakpoints, $breakpoint);
+    @if type-of($bp)=="list" {
+      $min: nth($bp, 1);
+      $max: nth($bp, 2);
+      @media (min-width: $min) and (max-width: $max) {
+        @content; // 使用 @content 插入特定的样式
+      }
+    } @else {
+      @media (min-width: $bp) {
+        @content; // 使用 @content 插入特定的样式
+      }
+    }
+
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}
