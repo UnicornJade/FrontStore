@@ -1,5 +1,8 @@
 import './index.scss'
 import SideBarItem from "@/components/SideBarItem";
+import FloatOptions from "@/components/FloatOptions";
+
+const buttonList = ['My Plan', 'Settings', 'Logout'];
 
 export default function SideBar() {
     return (
@@ -24,11 +27,7 @@ export default function SideBar() {
                 ></SideBarItem>
             </div>
             <div className="bottomSection">
-                <SideBarItem
-                    href={''}
-                    className={"settings"}
-                    innerText={"Settings"}
-                ></SideBarItem>
+                <FloatOptions list={buttonList}></FloatOptions>
             </div>
         </div>
     )

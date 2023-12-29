@@ -18,15 +18,20 @@ import Link from 'next/link'
  * @constructor
  */
 
-function SideBarItem({href = "/", className, iconType = "icon-time", innerText, active, ...rest}) {
+function SideBarItem({href = "/", className, iconType = "icon-time", innerText, active, hover, ...rest}) {
     const pathname = usePathname()
+    const hoverStyle = {
+        backgroundColor: hover ? '#1E1E1E' : ''
+    }
     const itemStyle = {
         opacity: (pathname === href || active) ? 1 : 0.5, // 根据是否被点击设置透明度
     };
+
     return (
         <Link href={href}>
             <div {...rest}
                  className={classNames("sideBarItems", className)}
+                 style={hoverStyle}
             >
                 <div className="innerItem"
                      style={itemStyle}
