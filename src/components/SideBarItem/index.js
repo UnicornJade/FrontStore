@@ -28,8 +28,8 @@ function SideBarItem({href = "/", className, iconType = "icon-time", innerText, 
     };
 
     return (
-        <Link href={href}>
-            <div {...rest}
+        <Link href={href} {...rest}>
+            <div
                  className={classNames("sideBarItems", className)}
                  style={hoverStyle}
             >

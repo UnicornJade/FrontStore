@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <body><Script src="//at.alicdn.com/t/c/font_4386293_wqamtvlrmjk.js"
+        <body><Script src="//at.alicdn.com/t/c/font_4386293_6fio8gprqbk.js"
                       strategy="afterInteractive"
         ></Script>
         <div className="home">

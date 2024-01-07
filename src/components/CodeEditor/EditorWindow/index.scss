@@ -1,0 +1,25 @@
+@use 'src/assets/styles/responsive';
+.editorWindow{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #292929;
+}
+
+.codeModeSelector{
+  display: flex;
+  align-items: flex-start;
+  height: 42px;
+  padding: 4px 16px 0;
+}
+
+.codeEditors{
+  flex-grow: 1;
+  background-color: #1E1E1E;
+  border: none;
+}
+
+.editorBottom{
+  height: 28px;
+}
