@@ -18,7 +18,7 @@ import Link from 'next/link'
  * @constructor
  */
 
-function SideBarItem({href = "/", className, iconType = "icon-time", innerText, active, hover,defaultColor='', ...rest}) {
+function CustomButton({href = "/", className, iconType = "icon-time", innerText, active, hover,defaultColor='', ...rest}) {
     const pathname = usePathname()
     const hoverStyle = {
         backgroundColor: hover ? '#1E1E1E' : defaultColor
@@ -47,4 +47,4 @@ const innerTextStyle={}
     );
 }
 
-export default SideBarItem;
+export default CustomButton;

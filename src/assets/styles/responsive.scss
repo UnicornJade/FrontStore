@@ -12,7 +12,8 @@ $breakpoints: (
         'desktop':(
                 1025px, 1200px
         ),
-        'tv':1201px
+        'tv':1201px,
+        'CodeView':1159px
 );
 // Mixin for responsive grid columns
 @mixin responsive-grid($breakpoint) {

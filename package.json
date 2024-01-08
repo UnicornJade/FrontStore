@@ -12,16 +12,21 @@
     "@codemirror/lang-css": "^6.2.1",
     "@codemirror/lang-html": "^6.4.7",
     "@codemirror/lang-javascript": "^6.2.1",
+    "@lezer/highlight": "^1.2.0",
     "@monaco-editor/react": "^4.6.0",
     "@uiw/codemirror-theme-dracula": "^4.21.21",
+    "@uiw/codemirror-theme-vscode": "^4.21.21",
+    "@uiw/codemirror-themes": "^4.21.21",
     "@uiw/react-codemirror": "^4.21.21",
     "classnames": "^2.3.2",
     "macy": "^2.5.1",
     "next": "14.0.4",
+    "overlayscrollbars-react": "^0.5.3",
     "prop-types": "^15.8.1",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "simplebar-react": "^3.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",

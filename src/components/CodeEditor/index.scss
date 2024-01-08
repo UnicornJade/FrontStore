@@ -3,52 +3,35 @@
 .livePreviewEditor{
   display:flex;
   flex-direction:column;
+  @include responsive.responsive-grid('CodeView') {
+    flex-direction:row;
+  }
   width: 100%;
-  height: 100%;
-}
-
-.codeEditors{
-  display: flex;
-  height: 240px;
-  width: 100%;
-  border: 2px solid #ffffff;
+  max-width: 1496px;
+  height: 781px;
   overflow: hidden;
-  @include responsive.responsive-grid('phone') {
-      display: none;
-  }
-  .htmlBox{
-    //flex-grow: 1;
-  }
-  .cssBox {
-    //flex-grow: 1;
-    border-left: 1px solid #feffe6;
-    border-right: 1px solid #feffe6;
-  }
-  .jsBox{
-    //flex-grow: 1;
-  }
+  margin:0 auto;
+  border-radius:0.75em ;
 }
-
-
-
-
-
 .iframeWindow {
-  width: 50%;
-  height: 300px;
-  @include responsive.responsive-grid('phone') {
-    width: 90%;
-    height: 33vh;
+  @include responsive.responsive-grid('CodeView') {
+    width: 50%;
+    height: 100%;
   }
-  @include responsive.responsive-grid('pad') {
-    width: 90%;
-    height: 33vh;
-
-  }
+  flex-grow: 1;
+  height: 450px;
 }
 
 
-
+.codeSpace{
+  flex-grow: 1;
+  @include responsive.responsive-grid('CodeView') {
+    width: 50%;
+    height: 100%;
+  }
+  height: 568px;
+  overflow: hidden;
+}
 .innerRenderSpace{
   width: 100vh;
   background-color: #E8E8E8;
